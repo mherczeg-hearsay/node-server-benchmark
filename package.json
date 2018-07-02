@@ -1,0 +1,15 @@
+{
+  "name": "node-server-benchmarks",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "benchmark": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "benchmark": "^2.1.4"
+  }
+}
