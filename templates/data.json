@@ -1,0 +1,19 @@
+{
+    "listOfObjects": [
+        { "name": "object1", "purpose": "testing" },
+        { "name": "object2", "purpose": "testing" },
+        { "name": "object3", "purpose": "testing" },
+        { "name": "object4", "purpose": "testing" },
+        { "name": "object5", "purpose": "testing" },
+        { "name": "object6", "purpose": "testing" },
+        { "name": "object7", "purpose": "testing" },
+        { "name": "object8", "purpose": "testing" },
+        { "name": "object8", "purpose": "testing" }
+    ],
+    "firstName": "John",
+    "lastName": "Doe",
+    "boolDataFalse": false,
+    "boolDataTrue": false,
+    "testNull": null,
+    "richText": "<div><h1>What is Lorem Ipsum?</h1><p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<p></div>"
+}
