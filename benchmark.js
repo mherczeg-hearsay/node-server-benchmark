@@ -18,7 +18,7 @@ suite
     .add('Re:dom', () => redomRender())
     .add('React', () => reactRender())
     .add('EJS', (deferred) => ejsRender().then(() => deferred.resolve()), {defer: true})
-    .add('handlebars', (deferred) => handlebarsRender().then(() => deferred.resolve()), {defer: true})
+    .add('handlebars', () => handlebarsRender())
     // add listeners
     .on('cycle', (event) => {
         if (!event.target.error) {

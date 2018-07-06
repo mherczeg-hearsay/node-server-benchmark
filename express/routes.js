@@ -43,9 +43,7 @@ router.get('/pug', (req, res) => {
 });
 
 router.get('/handlebars', (req, res) => {
-    handlebarsRender()
-        .then((output) => res.send(output))
-        .catch((err) => res.send(err));
+    res.send(handlebarsRender());
 });
 
 router.get('/react', (req, res) => {

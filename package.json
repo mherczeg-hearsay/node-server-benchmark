@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "benchmark": "npm run build-react && node benchmark.js",
-    "start": "npm run build-react && node server.js",
-    "build-react": "webpack --config templates/react/webpack.config.js"
+    "benchmark": "npm run build && node benchmark.js",
+    "start": "npm run build && node server.js",
+    "build": "npm run build-react && npm run build-handlebars",
+    "build-react": "webpack --config templates/react/webpack.config.js",
+    "build-handlebars": "webpack --config templates/handlebars/webpack.config.js"
   },
   "author": "",
   "license": "ISC",
