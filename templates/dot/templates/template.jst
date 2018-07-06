@@ -1,7 +1,39 @@
-<div>
-    <span>firstName</span>
-    <span>{{=it.firstName}}</span>
-</div><div>
-    <span>lastName</span>
-    <span>{{=it.lastName}}</span>
-</div>
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="iteration-test">
+            <ul>
+                {{~it.listOfObjects :item}}
+                <li>{{=item.name}}</li>
+                {{~}}
+            </ul>
+        </div>
+        <div class="condition-test">
+        {{? it.boolDataFalse }}
+            <div>this shouldn't show</div>
+            {{?? it.testNull === false }}
+                <div>this shouldn't show either</div>
+            {{?? it.boolDataFalse === false }}
+                <div>this should show though</div>
+            {{??}}
+            <div>if this shows, something is worng</div>
+        {{?}}
+        </div>
+        <div class="native-for-loop-test">
+            {{ for(var prop in it) { }}
+                <div>{{=prop}}</div>
+            {{ } }}
+            {{ for(var i = 0; i < 10; i++) { }}
+                <div>{{=i}}</div>
+            {{ } }}
+        </div>
+        <div class="rich-text-test">
+            {{=it.richText}}
+        </div>
+        <div class="regex-test">
+        </div>
+        <div class="include-test">
+        </div>
+    </body>
+</html>
