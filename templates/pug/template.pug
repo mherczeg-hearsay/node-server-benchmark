@@ -1,6 +1,23 @@
-div
-    span firstName
-    span #{firstName}
-div
-    span lastName
-    span #{lastName}
+html
+    head
+    body
+        div(class="iteration-test")
+            ul 
+                each item in listOfObjects
+                    li #{item.name}
+            ul 
+                - for (var i = 0; i < 10; i++)
+                    li= i
+
+        div(class="condition-test")
+            if boolDataFalse
+                div this shouldn't show
+            else if boolDataTrue
+                div this should show though
+            else
+                div if we got this part, we got a problem
+    
+        div(class="rich-text-test") !{richText}
+        div(class="regex-test")
+        div(class="include-test")
+            include ../common.html
