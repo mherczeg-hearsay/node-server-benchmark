@@ -26,6 +26,10 @@ router.get('/dot', (req, res) => {
     res.send(dotRender());
 });
 
+router.get('/redom', (req, res) => {
+    res.send(redomRender());
+});
+
 router.get('/ejs', (req, res) => {
     ejsRender()
         .then((output) => res.send(output))
