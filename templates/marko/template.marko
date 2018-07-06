@@ -1,8 +1,37 @@
-<div>
-    <span>firstName</span>
-    <span>${input.firstName}</span>
-</div>
-<div>
-    <span>lastName</span>
-    <span>${input.lastName}</span>
-</div>
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="iteration-test">
+            <ul>
+                <for(item in input.listOfObjects)>
+                    <li>${item.name}</li>
+                </for>
+            </ul>
+            <ul>
+                <li for(i from 0 to 9)>
+                    ${i}
+                </li>
+            </ul>
+        </div>
+        <div class="condition-test">
+        <if(input.boolDataFalse)>
+            <div>this shouldn't show</div>
+        </if>
+        <else-if(input.boolDataTrue)>
+            <div>this should show</div>
+        </else-if>
+        <else>
+            <div>if this shows, something's woring</div>
+        </else>
+        </div>
+        <div class="rich-text-test">
+            $!{input.richText}
+        </div>
+        <div class="regex-test">
+        </div>
+        <div class="include-test">
+            <include-html('../common.html')/>
+        </div>
+    </body>
+</html>
