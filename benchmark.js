@@ -5,6 +5,7 @@ const dotRender = require('./templates/dot');
 const ejsRender = require('./templates/ejs');
 const pugRender = require('./templates/pug');
 const redomRender = require('./templates/redom');
+const reactRender = require('./templates/react');
 const handlebarsRender = require('./templates/handlebars');
 const suite = new Benchmark.Suite;
 
@@ -15,6 +16,7 @@ suite
     .add('doT', () => dotRender())
     .add('Pug', () => pugRender())
     .add('Re:dom', () => redomRender())
+    .add('React', () => reactRender())
     .add('EJS', (deferred) => ejsRender().then(() => deferred.resolve()), {defer: true})
     .add('handlebars', (deferred) => handlebarsRender().then(() => deferred.resolve()), {defer: true})
     // add listeners
