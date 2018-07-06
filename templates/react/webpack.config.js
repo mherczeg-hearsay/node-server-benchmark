@@ -22,6 +22,13 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/,
+        use: {
+          loader: 'html-loader',
+          options: { attrs: [':data-src'] }
+        }
+      },
+      {
         test: /\.jsx?$/,
         exclude: /node_modules/,
         use: [
