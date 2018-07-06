@@ -7,6 +7,7 @@ const dotRender = require('../templates/dot');
 const ejsRender = require('../templates/ejs');
 const pugRender = require('../templates/pug');
 const redomRender = require('../templates/redom');
+const handlebarsRender = require('../templates/handlebars');
 
 router.get('/', (req, res) => {
     res.sendFile('index.html', {
@@ -38,6 +39,12 @@ router.get('/ejs', (req, res) => {
 
 router.get('/pug', (req, res) => {
     res.send(pugRender());
+});
+
+router.get('/handlebars', (req, res) => {
+    handlebarsRender()
+        .then((output) => res.send(output))
+        .catch((err) => res.send(err));
 });
 
 module.exports = router;
