@@ -1,7 +1,35 @@
-<div>
-    <span>firstName</span>
-    <span>{{ firstName }}</span>
-</div><div>
-    <span>lastName</span>
-    <span>{{ lastName }}</span>
-</div>
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="iteration-test">
+            <ul>
+                {% for item in listOfObjects %}
+                <li>{{ item.name }}</li>
+                {% endfor %}
+            </ul>
+            <ul>
+            {% for i in range(0, 10) -%}
+                <li>{{ i }}</li>
+            {%- endfor %}
+            </ul>
+        </div>
+        <div class="condition-test">
+            {% if boolDataFalse %}
+                <div>this shouldn't show</div>
+            {% elif boolDataTrue %}
+                <div>this should show</div>
+            {% else %}
+                <div>if this shows, something's wrong</div>
+            {% endif %}
+        </div>
+        <div class="rich-text-test">
+            {{ richText | safe }}
+        </div>
+        <div class="regex-test">
+        </div>
+        <div class="include-test">
+            {% include "../common.html" %}
+        </div>
+    </body>
+</html>
