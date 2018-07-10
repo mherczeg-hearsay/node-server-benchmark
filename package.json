@@ -6,9 +6,10 @@
   "scripts": {
     "benchmark": "npm run build && node benchmark.js",
     "start": "npm run build && node server.js",
-    "build": "npm run build-react && npm run build-handlebars",
+    "build": "npm run build-react && npm run build-handlebars && npm run build-dot",
     "build-react": "webpack --config templates/react/webpack.config.js",
-    "build-handlebars": "webpack --config templates/handlebars/webpack.config.js"
+    "build-handlebars": "webpack --config templates/handlebars/webpack.config.js",
+    "build-dot": "webpack --config templates/dot/webpack.config.js"
   },
   "author": "",
   "license": "ISC",
