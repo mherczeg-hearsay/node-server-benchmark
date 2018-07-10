@@ -8,6 +8,11 @@
                 <li>{{=item.name}}</li>
                 {{~}}
             </ul>
+            <ul>
+            {{ for(var i = 0; i < 10; i++) { }}
+                <li>{{=i}}</li>
+            {{ } }}
+            </ul>
         </div>
         <div class="condition-test">
         {{? it.boolDataFalse }}
@@ -20,20 +25,13 @@
             <div>if this shows, something is worng</div>
         {{?}}
         </div>
-        <div class="native-for-loop-test">
-            {{ for(var prop in it) { }}
-                <div>{{=prop}}</div>
-            {{ } }}
-            {{ for(var i = 0; i < 10; i++) { }}
-                <div>{{=i}}</div>
-            {{ } }}
-        </div>
         <div class="rich-text-test">
             {{=it.richText}}
         </div>
         <div class="regex-test">
         </div>
         <div class="include-test">
+            {{#def.include('../common.html')}}
         </div>
     </body>
 </html>

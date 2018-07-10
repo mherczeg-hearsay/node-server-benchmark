@@ -1,10 +1,4 @@
-require("dot").process({
-	global: "_page.render"
-	, destination: __dirname + "/rendered/"
-	, path: (__dirname + "/templates")
-});
-
-const render = require('./rendered/template');
+const { renderer } = require('./dist/bundle');
 const data = require('../data.json');
 
-module.exports = () => render(data);
+module.exports = () => renderer(data);
