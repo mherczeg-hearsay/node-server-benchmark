@@ -1,7 +1,35 @@
-<div>
-    <span>firstName</span>
-    <span><%=firstName%></span>
-</div><div>
-    <span>lastName</span>
-    <span><%=lastName%></span>
-</div>
+<html>
+    <head>
+    </head>
+    <body>
+        <div class="iteration-test">
+            <ul>
+                <% for (var i = 0; i < listOfObjects.length; i++) { %>
+                <li><%= listOfObjects[i].name %></li>
+                <% } %>
+            </ul>
+            <ul>
+                <% for (var i = 0; i < 10; i++) { %>
+                <li><%= i %></li>
+                <% } %>
+            </ul>
+        </div>
+        <div class="condition-test">
+            <%if (boolDataFalse) { %>
+                <div>this shouldn't show</div>
+            <% } else if (boolDataTrue) { %>
+                <div>this should show</div>
+            <% } else { %>
+                <div>if this shows, something's wrong</div>
+            <% } %>
+        </div>
+        <div class="rich-text-test">
+            <%- richText %>
+        </div>
+        <div class="regex-test">
+        </div>
+        <div class="include-test">
+            <% include ../common.html %>
+        </div>
+    </body>
+</html>
